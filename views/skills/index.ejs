@@ -1,13 +1,16 @@
-
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
 <body>
     <h1>Skills</h1>
     <ul>
       <% skills.forEach(function(skill) { %>
         <li>
-          <%= skill.skill %>
+            <a href="/skills/<%= skill.skill %>"><%= skill.skill %></a>
          
         </li>
       <% }); %>
     </ul>
+    <a href="/">Home Page</a>
   </body>
 </html>

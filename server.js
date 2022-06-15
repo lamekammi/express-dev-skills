@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var skillsRouter = require('./routes/skills');
 
+
 var app = express();
 
 // view engine setup
@@ -20,6 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/skills', skillsRouter);
 app.use('/skills', skillsRouter);
 
 // catch 404 and forward to error handler

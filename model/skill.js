@@ -1,7 +1,7 @@
 const skills = [
     {skill: "creative", info: "hello" },
-    {skill: "problem solving", info: "hello"},
-    {skill: "time management", info: "hello"}
+    {skill: "problem solving", info: "hey"},
+    {skill: "time management", info: "hi"}
 ];
 
 module.exports = {
@@ -14,6 +14,5 @@ function getAll() {
 }
 
 function getOne(skill) {
-    skill = skills.skill;
-    return skills.find(skill => skill.skill === skill);
+    return skills.find(currentSkill => currentSkill.skill === skill);
 }

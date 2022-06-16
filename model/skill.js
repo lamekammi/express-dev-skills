@@ -7,6 +7,7 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
+    create,
 };
 
 function getAll() {
@@ -15,4 +16,8 @@ function getAll() {
 
 function getOne(skill) {
     return skills.find(currentSkill => currentSkill.skill === skill);
+}
+
+function create(skill) {
+    skills.push(skill);
 }

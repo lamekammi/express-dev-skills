@@ -16,20 +16,26 @@ function getAll() {
     return skills;
 }
 
-function getOne(skill) {
-    return skills.find(currentSkill => currentSkill.skill === skill);
+function getOne(id) {
+    id = parseInt(id);
+    return skills.find(skill => skill.id === id);
 }
 
 function create(skill) {
+    skill.id = Date.now() % 1000000;
     skills.push(skill);
 }
 
-function deleteOne(skill) {
-    const index = skills.findIndex(currentSkill => currentSkill.skill === skill);
+function deleteOne(id) {
+    id = parseInt(id)
+    const index = skills.findIndex(skill => skill.id === id);
     skills.splice(index, 1);
 }
 
-function update(editContent, skill) {
-    const skillUpdate = skills.find(currentSkill => currentSkill.skill === skill)
+function update(editContent, id) {
+    id = parseInt(id)
+    const skillUpdate = skills.find(skill => skill.id === id)
     skillUpdate.skill = editContent.skill
+    const infoUpdate = skills.find(updateInfo => updateInfo.id === id)
+    infoUpdate.info = editContent.info
 }

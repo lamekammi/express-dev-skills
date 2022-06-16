@@ -18,7 +18,7 @@ function index(req, res) {
 
 function show(req, res) {
     res.render('skills/show', {
-        skill: Skill.getOne(req.params.skill),
+        skill: Skill.getOne(req.params.id),
     })
 }
 
@@ -32,17 +32,17 @@ function create(req, res) {
 }
 
 function deleteSkill(req, res) {
-    Skill.deleteOne(req.params.skill);
+    Skill.deleteOne(req.params.id);
     res.redirect('/skills');
 }
 
 function edit(req, res) {
     res.render('skills/edit', {
-        skill: Skill.getOne(req.params.skill)
+        skill: Skill.getOne(req.params.id)
     });
 }
 
 function update(req, res) {
-    Skill.update(req.body, req.params.skill)
-    res.redirect(`/skills/${req.params.skill}`);
+    Skill.update(req.body, req.params.id)
+    res.redirect(`/skills/${req.params.id}`);
 }

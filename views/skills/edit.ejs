@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Dev Skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Update Skill</h1>
+    <form action="/skills/<%= skill.skill %>?_method=PUT" method="POST" autocomplete="off">
+      <input type="text" name="skill" value="<%=skill.skill %>">
+      <button type="submit">Update Skill</button>
+      <input type="text" name="info" value="<%=skill.info %>">
+      <button type="submit">Update Info</button>
+    </form>
+    <br></br>
+    <a href="/">Home Page</a> || 
+    <a href="/skills">Skills</a> 
+  </body>

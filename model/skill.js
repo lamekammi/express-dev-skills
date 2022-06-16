@@ -1,7 +1,7 @@
 const skills = [
-    {skill: "creative", info: "hello" },
-    {skill: "problem solving", info: "hey"},
-    {skill: "time management", info: "hi"}
+    {id: 0421, skill: "creative", info: "hello" },
+    {id: 0814, skill: "problem solving", info: "hey"},
+    {id: 0216, skill: "time management", info: "hi"}
 ];
 
 module.exports = {
@@ -9,6 +9,7 @@ module.exports = {
     getOne,
     create,
     deleteOne,
+    update,
 };
 
 function getAll() {
@@ -26,4 +27,9 @@ function create(skill) {
 function deleteOne(skill) {
     const index = skills.findIndex(currentSkill => currentSkill.skill === skill);
     skills.splice(index, 1);
+}
+
+function update(editContent, skill) {
+    const skillUpdate = skills.find(currentSkill => currentSkill.skill === skill)
+    skillUpdate.skill = editContent.skill
 }

@@ -1,10 +1,20 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(https://i.imgur.com/BAPoXGV.jpg);
+  color: #292e4a;
+}
+
+div {
+  text-align: center;
+  background-color: rgba(219, 219, 219, 0.8);
+  padding: 50px;
+  width: 300px;
+  margin-left: 40%;
 }
 
 a {
-  color: #00B7FF;
+  color: #654287;
 }
 
 .delete-form {
@@ -13,9 +23,16 @@ a {
 }
 	
 .delete-form button {
-  color: red;
+  border-radius: 5px;
+  color: #bf7386;
 }
 	
 li {
   list-style: none;
+}
+
+button {
+  color: #73bfb1; 
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px rgba(80, 80, 80, 0.5);
 }

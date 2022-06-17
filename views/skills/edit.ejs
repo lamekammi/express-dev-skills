@@ -5,6 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <div>
     <h1>Update Skill</h1>
     <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
       <input type="text" name="skill" value="<%=skill.skill %>">
@@ -13,6 +14,7 @@
       <button type="submit">Update Info</button>
     </form>
     <br></br>
-    <a href="/">Home Page</a> || 
-    <a href="/skills">Skills</a> 
+    <p>🍡 <a href="/">Home Page</a> || 
+    <a href="/skills">Skills</a> 🍡</p>
+    </div>
   </body>

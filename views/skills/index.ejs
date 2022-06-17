@@ -5,20 +5,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
 <body>
+  <div>
     <h1>Skills</h1>
     <ul>
       <% skills.forEach(function(skill) { %>
         <li>
-          <form action="/skills/<%= skill.id %>?_method=DELETE"
-            class="delete-form" method="POST">
-            <button type="submit">X</button>
-          </form>
             <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
-         
+            <form action="/skills/<%= skill.id %>?_method=DELETE"
+              class="delete-form" method="POST">
+              <button type="submit">❌</button>
+            </form>
         </li>
       <% }); %>
     </ul>
-    <a href="/">Home Page</a> ||
-    <a href="/skills/new">Add Skill</a>
+    <br />
+    <p>🍡 <a href="/">Home Page</a> ||
+    <a href="/skills/new">Add Skill</a> 🍡</p>
+    </div>
   </body>
 </html>
